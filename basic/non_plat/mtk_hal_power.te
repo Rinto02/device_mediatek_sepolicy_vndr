@@ -125,6 +125,11 @@ allow mtk_hal_power sysfs_devices_block:file rw_file_perms;
 # Purpose : Allow powerHAL to access prop
 set_prop(mtk_hal_power, vendor_power_prop)
 
+# Date : 2024/09/21
+# Operation : SQC
+# Purpose : Allow access PowerHAL from vendor
+allow mtk_hal_power vendor_power_prop:property_service set;
+
 # Date : 2019/05/29
 # Operation: SQC
 # Purpose : Allow powerHAL to access wifi driver
